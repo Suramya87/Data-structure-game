@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba41iiawcp4j"]
+
+[ext_resource type="Script" path="res://script/target.gd" id="1_jy656"]
+[ext_resource type="Texture2D" uid="uid://drhptd1c7m88r" path="res://asset/prototype 1.png" id="2_sjtx8"]
+[ext_resource type="PackedScene" uid="uid://djwx5ygpnsfyu" path="res://scenes/pop_zone.tscn" id="3_rmvb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3ad6"]
+size = Vector2(32, 14)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_jy656")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_sjtx8")
+region_enabled = true
+region_rect = Rect2(24, 4, 34, 17)
+
+[node name="pop_zone" parent="." instance=ExtResource("3_rmvb8")]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pop_zone"]
+z_index = 5
+shape = SubResource("RectangleShape2D_m3ad6")
+one_way_collision_margin = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)

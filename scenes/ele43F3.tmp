@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8to1sjjo6uur"]
+
+[ext_resource type="Script" path="res://script/stack_adding.gd" id="1_nh651"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vla5b"]
+load_path = "res://.godot/imported/stack_tiles.png-1e73c195590442546e836ddad155c72e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bhrj"]
+size = Vector2(29, 12)
+
+[node name="element" type="StaticBody2D"]
+script = ExtResource("1_nh651")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.8975, 0.781667)
+texture = SubResource("CompressedTexture2D_vla5b")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8bhrj")
