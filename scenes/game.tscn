@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqhyatbahq7j"]
+[gd_scene load_steps=8 format=3 uid="uid://cqhyatbahq7j"]
 
 [ext_resource type="Script" path="res://script/game.gd" id="1_8kh25"]
 [ext_resource type="Texture2D" uid="uid://b3lcpr06f1y4h" path="res://asset/BG.png" id="2_3yux3"]
 [ext_resource type="PackedScene" uid="uid://ba41iiawcp4j" path="res://scenes/target.tscn" id="2_wx0o0"]
 [ext_resource type="Texture2D" uid="uid://8bcvovj0nvj2" path="res://asset/bgl1.png" id="3_3al0r"]
+[ext_resource type="Texture2D" uid="uid://b27wsf5slb5xn" path="res://asset/bg2.png" id="4_7agkq"]
 [ext_resource type="Texture2D" uid="uid://cxbtt4gba3jq8" path="res://asset/layerCLOSE.png" id="5_rjlgg"]
 [ext_resource type="Texture2D" uid="uid://bemqyjn8u2fa3" path="res://asset/blue star layer (1).png" id="6_iuje2"]
 
@@ -16,7 +17,7 @@ script = ExtResource("1_8kh25")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 2
-motion_mirroring = Vector2(0, 700)
+motion_mirroring = Vector2(0, 1400)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -10
@@ -24,6 +25,17 @@ texture_filter = 2
 position = Vector2(1, 1)
 scale = Vector2(0.729286, 0.729286)
 texture = ExtResource("2_3yux3")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 2
+motion_mirroring = Vector2(0, 1400)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+z_index = -10
+texture_filter = 2
+position = Vector2(1, 700)
+scale = Vector2(0.729286, 0.729286)
+texture = ExtResource("4_7agkq")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(1, 0.5)
