@@ -1,5 +1,6 @@
 extends Node2D
 
+var stack_list = []
 
 var Pop = pop.new()
 
@@ -18,9 +19,18 @@ func _physics_process(delta: float) -> void:
 		#print("second")
 	if Input.is_action_just_pressed("remove"):
 		num +=15
-		#Pop._on_area_entered(e.CollisionShape2D)
+		remove()
 		#Pop._on_area_entered(e)
+	if Input.is_action_just_pressed("Find"):
+		print(len(stack_list))
 func add(pos):
 	var stack = e.instantiate()
 	stack.position = pos
 	add_child(stack)
+	stack_list.append(stack)  # Store the reference in a list.
+	
+func remove():
+	if stack_list.size() > 0:  # Check if there are items to remove.
+		var stack_to_remove = stack_list.pop_back()  # Remove the last item from the list.
+		remove_child(stack_to_remove)  # Detach it from the scene tree.
+		stack_to_remove.queue_free()  # Free the memory.

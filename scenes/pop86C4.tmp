@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://djwx5ygpnsfyu"]
+
+[ext_resource type="Script" path="res://script/pop_zone.gd" id="1_7wywv"]
+
+[node name="pop_zone" type="Area2D" groups=["kill"]]
+script = ExtResource("1_7wywv")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
