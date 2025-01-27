@@ -8,16 +8,18 @@ var e = preload("res://scenes/element.tscn")
 var num = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#var Game_info = preload("res://script/game.gd")
 	add(Vector2(0,0))
 	
 func _physics_process(delta: float) -> void:
 	#Pop._on_area_entered()
-	if Input.is_action_just_pressed("add"):
+	if Input.is_action_just_pressed("add"): 
+		#add(Vector2(0,num))
 		num -= 15
-		#print("2")
 		add(Vector2(0,num))
-		#print("second")
-	if Input.is_action_just_pressed("remove"):
+
+	if len(stack_list) != 0 && Input.is_action_just_pressed("remove"):
+		#remove()
 		num +=15
 		remove()
 		#Pop._on_area_entered(e)
