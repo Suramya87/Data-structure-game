@@ -10,6 +10,24 @@ size = Vector2(32, 14)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_jy656")
 
+[node name="color" type="Label" parent="." node_paths=PackedStringArray("shortcut_context")]
+offset_left = -178.0
+offset_top = 53.0
+offset_right = -138.0
+offset_bottom = 76.0
+shortcut_context = NodePath("../pop_zone")
+text = "color
+"
+
+[node name="Label" type="Label" parent="." node_paths=PackedStringArray("shortcut_context")]
+offset_left = -178.0
+offset_top = 75.0
+offset_right = -138.0
+offset_bottom = 98.0
+shortcut_context = NodePath("../pop_zone")
+text = "fuck
+"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_sjtx8")
@@ -27,5 +45,6 @@ one_way_collision_margin = 0.0
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = -6.28319
 zoom = Vector2(3, 3)
+process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0

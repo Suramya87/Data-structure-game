@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca5ukejiecvf7"]
+
+[ext_resource type="Script" path="res://script/element.gd" id="1_2vlf6"]
+[ext_resource type="Texture2D" uid="uid://drhptd1c7m88r" path="res://asset/prototype 1.png" id="2_w8sv6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bhrj"]
+size = Vector2(29, 12)
+
+[node name="element 2" type="StaticBody2D"]
+script = ExtResource("1_2vlf6")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Purple"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8bhrj")
+debug_color = Color(0.519945, 0.494613, 0.775707, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+scale = Vector2(0.8975, 0.781667)
+texture = ExtResource("2_w8sv6")
+region_enabled = true
+region_rect = Rect2(64, 5, 32, 15)
