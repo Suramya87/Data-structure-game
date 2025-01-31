@@ -4,7 +4,7 @@ class_name pop
 #@onready var timer: Timer = $Timer
 var box = ""
 
-@onready var color_label: Label =$"../color"
+@onready var color_label: Label =$"../Camera2D/color"
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Green"):

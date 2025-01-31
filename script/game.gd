@@ -19,11 +19,27 @@ func _physics_process(delta: float) -> void:
 		#add(Vector2(0,num))
 		num -= 15
 		add(Vector2(0,num))
+		#num -= 15
+		#add(Vector2(0,num))
+		#num -= 15
+		#add(Vector2(0,num))
+		#num -= 15
+		#add(Vector2(0,num))
+		#num -= 15
+		#add(Vector2(0,num))
 
 	if len(stack_list) != 0 && Input.is_action_just_pressed("remove"):
 		#remove()
 		num +=15
 		remove()
+		#num +=15
+		#remove()
+		#num +=15
+		#remove()
+		#num +=15
+		#remove()
+		#num +=15
+		#remove()
 		#Pop._on_area_entered(e)
 	if Input.is_action_just_pressed("Find"):
 		print(len(stack_list))
